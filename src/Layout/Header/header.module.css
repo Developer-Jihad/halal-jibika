@@ -1,0 +1,31 @@
+.header {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  -webkit-box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
+  -moz-box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
+  box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1080px;
+}
+
+.nav a {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: large;
+  color: green;
+  padding: 10px 10px;
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+
+.logo img {
+  height: 50px;
+}
+.routes a:hover {
+  background-color: rgb(206, 250, 139);
+}
