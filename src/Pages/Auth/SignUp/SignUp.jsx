@@ -1,5 +1,7 @@
 import React from "react";
-import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 import img from "../../../assets/images/login.gif";
 import styles from "../auth.module.css"; // Import your CSS module
 import { Link } from "react-router-dom";
@@ -37,8 +39,8 @@ const SignUp = () => {
           {/* Social Icons */}
           <h3>Sign-In with:</h3>
           <div className={styles.socialIcons}>
-            <FaGoogle className={styles.icon} />
-            <FaFacebook className={styles.icon} />
+            <FcGoogle className={styles.icon} />
+            <FaFacebook className={styles.icon} style={{color:"#1877f2"}} />
             <FaGithub className={styles.icon} />
           </div>
           <br />

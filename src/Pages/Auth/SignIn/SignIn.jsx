@@ -3,6 +3,7 @@ import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
 import styles from "../auth.module.css";
 import img from "../../../assets/images/login.gif";
 import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 
 const SignIn = () => {
   return (
@@ -34,8 +35,8 @@ const SignIn = () => {
           {/* Social Icons */}
           <h3>Sign-In with:</h3>
           <div className={styles.socialIcons}>
-            <FaGoogle className={styles.icon} />
-            <FaFacebook className={styles.icon} />
+            <FcGoogle className={styles.icon} />
+            <FaFacebook className={styles.icon} style={{color:"#1877f2"}} />
             <FaGithub className={styles.icon} />
           </div>
           <br />

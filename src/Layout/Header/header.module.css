@@ -1,4 +1,5 @@
 .header {
+  padding: 10px 20px;
   background-color: aliceblue;
   display: flex;
   justify-content: center;
@@ -7,14 +8,19 @@
   box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
   margin-bottom: 50px;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1180px;
+  width: 95%;
 }
 
-.nav a {
+.logo img {
+  height: 50px;
+}
+
+.routes a {
   font-weight: 600;
   text-decoration: none;
   font-size: large;
@@ -24,9 +30,50 @@
   border-radius: 5px;
 }
 
-.logo img {
-  height: 50px;
-}
 .routes a:hover {
   background-color: rgb(206, 250, 139);
+}
+
+.menuIcon {
+  font-size: x-large;
+  color: #36b82a;
+  display: none; /* Hide the hamburger icon by default on desktop */
+  cursor: pointer;
+}
+
+.desktopMenu {
+  display: flex;
+}
+
+.mobileMenu {
+  display: none; /* Hide the mobile menu by default on desktop */
+}
+
+/* Media query for small screens (mobile) */
+@media only screen and (max-width: 768px) {
+  .desktopMenu {
+    display: none; /* Hide the desktop menu on mobile */
+  }
+
+  .mobileMenu {
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: aliceblue;
+    z-index: 1;
+  }
+
+  .menuIcon {
+    display: block; /* Show the hamburger icon on mobile */
+  }
+
+  .nav.showMenu {
+    flex-direction: row;
+    align-items: center;
+  }
 }

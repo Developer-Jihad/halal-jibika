@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className={styles.footerBg}>
       <footer className={styles.footer}>
-        <div className={styles.column}>
+        <div className={styles.column} style={{border: 'none'}}>
           <div className={styles.logo}>
             <img src={Logo} alt="" />
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
           <p>Email: info@example.com</p>
           <p>Phone: +1 123-456-7890</p>
           <h3>About Us</h3>
-          <p>Your company's description goes here.</p>
+          <p>Company's description goes here.</p>
         </div>
         <div className={styles.column}>
           <h3>Social Media</h3>
