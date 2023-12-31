@@ -1,8 +1,9 @@
 
 .footerBg{
-background: linear-gradient(45deg, #1daf72, #1aad21 );
+background: linear-gradient(45deg, #8bdf40, #36b82a );
 display: flex;
 justify-content: center;
+margin-top: 70px;
 }
 
 .footer {

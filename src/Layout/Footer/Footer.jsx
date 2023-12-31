@@ -15,7 +15,7 @@ const Footer = () => {
             <img src={Logo} alt="" />
           </div>
           <p>
-            “Keep hardworking, take patients and make yourself always ready for
+            “Keep hardworking, take patients and make yourself ready for
             jobs”.
           </p>
         </div>

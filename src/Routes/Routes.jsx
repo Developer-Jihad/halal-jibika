@@ -29,16 +29,17 @@ const routes = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path: "/signin",
+        element: <SignIn />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
+      },
     ],
   },
-  {
-    path: "/signin",
-    element: <SignIn />,
-  },
-  {
-    path: "/signup",
-    element: <SignUp />,
-  },
+  
   {
     path: "*",
     element: <NotFound />,
