@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import img from "../../assets/images/contact.gif";
 
 export default function Contact() {
   return (
-    <div>Contact</div>
-  )
+    <div style={{ textAlign: "center" }}>
+      <img src={img} alt="" />
+    </div>
+  );
 }

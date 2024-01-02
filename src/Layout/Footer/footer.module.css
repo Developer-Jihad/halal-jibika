@@ -28,7 +28,7 @@ justify-content: center;
 }
 
 .column h3 {
-  color: #8bdf40;
+  color: var(--lightGreen);
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
@@ -54,7 +54,7 @@ justify-content: center;
 }
 
 .column a:hover {
-  color: green;
+  color: var(--deepGreen);
   background-color: #fff; /* Add background color on hover */
 }
 
@@ -74,7 +74,7 @@ justify-content: center;
 }
 
 .socialLinks a:hover {
-  color: green; /* Change the icon color on hover */
+  color: var(--deepGreen); /* Change the icon color on hover */
   animation: none; /* Remove pulsating animation on hover */
 }
 

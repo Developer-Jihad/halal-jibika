@@ -8,9 +8,9 @@
   display: flex;
   justify-content: space-between;
 }
-a{
+.container a{
   text-decoration: none;
-  color: green;
+  color: var(--deepGreen);
 }
 
 .authImage {
@@ -36,7 +36,7 @@ a{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.container h2 {
   text-align: center;
 }
 
@@ -54,7 +54,7 @@ input {
 .btn {
   width: 100%;
   padding: 10px;
-  background-color: #8bdf40;
+  background-color: var(--deepGreen);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -63,7 +63,7 @@ input {
 }
 
 .btn:hover {
-  background-color: #8bdf40;
+  background-color: var(--lightGreen);
 }
 
 .socialIcons {
@@ -84,7 +84,8 @@ input {
 }
 
 .icon:hover {
-  color: #8bdf40;
+  transform: scale(1.05);
+  transition: all .5s ease-in-out;
 }
 
 @media (max-width: 768px) {

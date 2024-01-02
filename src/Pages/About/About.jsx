@@ -1,8 +1,10 @@
 import React from 'react'
-import style from './about.module.css'
+import img from "../../assets/images/about.gif";
 
 export default function About() {
   return (
-    <div className={style.about}>About</div>
+    <div style={{ textAlign: "center" }}>
+      <img src={img} alt="" />
+    </div>
   )
 }

@@ -1,11 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap");
 
 * {
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+.container {
+  max-width: 1240px;
+  margin: auto;
+  padding-inline: 20px;
+}
+:root {
+  --deepGreen: #2bb573;
+  --lightGreen: #82d32d;
 }
 div a.active {
-  background-color: rgb(206, 250, 139);
+  background-color: rgb(200, 250, 150);
+}
+h1 {
+  font-size: clamp(21px, 5vw, 40px);
+  /* line-height: clamp(30px, 5vw, 60px); */
+}
+h3 {
+  font-size: clamp(13px, 5vw, 30px);
+  font-weight: 500;
 }

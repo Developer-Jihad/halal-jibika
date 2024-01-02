@@ -1,11 +1,10 @@
 .header {
   padding: 10px 20px;
   background-color: rgb(240, 248, 255, 0.7);
+  backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
-  -webkit-box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
-  -moz-box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
-  box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
+  box-shadow: 0 4px 8px 0 rgba(95, 95, 95, 0.1), 0 6px 20px 0 rgba(95, 95, 95, 0.1);
   margin-bottom: 50px;
   position: fixed;
   top: 0;
@@ -27,40 +26,40 @@
   font-weight: 600;
   text-decoration: none;
   font-size: large;
-  color: #36b82a;
+  color: var(--deepGreen);
   padding: 10px 10px;
   margin: 0px 10px;
   border-radius: 5px;
 }
 .profileName {
   margin-left: 10px;
-  border: 1px solid #36b82a;
-  color: #36b82a;
+  border: 1px solid var(--deepGreen);
+  color: var(--deepGreen);
   padding: 10px 10px;
   font-weight: bold;
   border-radius: 1px 10px 1px 10px !important;
 }
 .profileImg {
   border-radius: 50%;
-  width: 30px;
+  width: 40px;
 }
 .signout {
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin: 0px 10px;
   font-weight: bold;
   border-radius: 5px;
-  border: 1px solid #36b82a;
+  border: 1px solid var(--deepGreen);
   font-size: 16px;
-  color: #36b82a;
+  color: var(--deepGreen);
   background-color: aliceblue;
 }
 .routes a:hover {
-  background-color: rgb(206, 250, 139);
+  background-color: rgb(200, 250, 150);
 }
 
 .menuIcon {
   font-size: x-large;
-  color: #36b82a;
+  color: var(--deepGreen);
   display: none; /* Hide the hamburger icon by default on desktop */
   cursor: pointer;
 }
@@ -75,6 +74,9 @@
 
 /* Media query for small screens (mobile) */
 @media only screen and (max-width: 768px) {
+  .header{
+    padding-inline: 10px;
+  }
   .desktopMenu {
     display: none; /* Hide the desktop menu on mobile */
   }
@@ -91,9 +93,7 @@
     right: 0;
     z-index: 1;
     background-color: rgb(240, 248, 255, 0.9);
-    -webkit-box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
-    -moz-box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
-    box-shadow: 0px 1px 10px 1px rgba(197, 198, 197, 1);
+    box-shadow: 0 4px 8px 0 rgba(95, 95, 95, 0.1), 0 6px 20px 0 rgba(95, 95, 95, 0.1);
     border-radius: 10px;
   }
 

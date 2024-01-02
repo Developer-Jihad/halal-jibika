@@ -7,6 +7,7 @@ import Contact from "../Pages/Contact/Contact";
 import SignIn from "../Pages/Auth/SignIn/SignIn";
 import SignUp from "../Pages/Auth/SignUp/SignUp";
 import NotFound from "../Pages/NotFound/NotFound";
+import Favourite from './../Pages/Favourite/Favourite';
 
 const routes = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const routes = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/favorite",
+        element: <Favourite />,
       },
       {
         path: "/signin",
