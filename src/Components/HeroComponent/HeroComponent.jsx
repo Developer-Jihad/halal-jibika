@@ -20,12 +20,13 @@ export default function HeroComponent() {
               <span> Find JOB </span>Without Compromising on
               <span> Your DEEN</span>
             </h1>
+
             <br />
             <h3>We have 3M+ Live Jobs</h3>
             <br />
-            <button>
-              <Link to="./jobs">Explor Now</Link>
-            </button>
+            <Link to="./jobs">
+              <button>Explor Now</button>
+            </Link>
             <br />
           </div>
           <div className={style.heroImg}>

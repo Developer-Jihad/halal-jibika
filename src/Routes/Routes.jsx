@@ -7,12 +7,20 @@ import Contact from "../Pages/Contact/Contact";
 import SignIn from "../Pages/Auth/SignIn/SignIn";
 import SignUp from "../Pages/Auth/SignUp/SignUp";
 import NotFound from "../Pages/NotFound/NotFound";
-import Favourite from './../Pages/Favourite/Favourite';
+import Favourite from "./../Pages/Favourite/Favourite";
+import axios from "axios";
+import Applied from "../Pages/Applied/Applied";
+import AddJobs from "../Pages/AddJobs/AddJobs";
+import Details from "../Pages/Jobs/Details";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    id: "root",
+    loader: () => {
+      return axios.get(`http://localhost:9000/jobs`);
+    },
     children: [
       {
         path: "/",
@@ -35,6 +43,19 @@ const routes = createBrowserRouter([
         element: <Favourite />,
       },
       {
+        path: "/applied",
+        element: <Applied />,
+      },
+      {
+        path: "/addjobs",
+        element: <AddJobs />,
+      },
+      {
+        path: "/details/:id",
+        element: <Details />,
+        loader: ({params}) => fetch(`http://localhost:5173/jobs/${params.id}`)
+      },
+      {
         path: "/signin",
         element: <SignIn />,
       },
@@ -44,7 +65,6 @@ const routes = createBrowserRouter([
       },
     ],
   },
-  
   {
     path: "*",
     element: <NotFound />,

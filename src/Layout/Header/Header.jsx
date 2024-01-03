@@ -63,6 +63,8 @@ export default function Header() {
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contacts</NavLink>
             <NavLink to="/favorite">Favorite</NavLink>
+            <NavLink to="/applied">Applied</NavLink>
+            <NavLink to="/addjobs">Add Jobs</NavLink>
           </div>
           <div className={`${style.routes} ${style.desktopMenu}`}>
             {user ? (
@@ -106,6 +108,12 @@ export default function Header() {
               </NavLink>
               <NavLink to="/contact" onClick={closeMenu}>
                 Favorite
+              </NavLink>
+              <NavLink to="/applied" onClick={closeMenu}>
+                Applied
+              </NavLink>
+              <NavLink to="/addjobs" onClick={closeMenu}>
+                Add Jobs
               </NavLink>
               <div className={style.profile}>
                 {user ? (

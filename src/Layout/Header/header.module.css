@@ -1,14 +1,16 @@
 .header {
   padding: 10px 20px;
-  background-color: rgb(240, 248, 255, 0.7);
-  backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(95, 95, 95, 0.1), 0 6px 20px 0 rgba(95, 95, 95, 0.1);
-  margin-bottom: 50px;
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: rgb(240, 248, 255, 0.7);
+  backdrop-filter: blur(15px);
+  border-bottom: 2px solid snow;
+  box-shadow: 0 4px 8px 0 rgba(95, 95, 95, 0.1),
+    0 6px 20px 0 rgba(95, 95, 95, 0.1);
+  margin-bottom: 50px;
 }
 
 .nav {
@@ -69,16 +71,15 @@
 }
 
 .mobileMenu {
-  display: none; /* Hide the mobile menu by default on desktop */
+  display: none;
 }
 
-/* Media query for small screens (mobile) */
 @media only screen and (max-width: 768px) {
-  .header{
+  .header {
     padding-inline: 10px;
   }
   .desktopMenu {
-    display: none; /* Hide the desktop menu on mobile */
+    display: none;
   }
 
   .mobileMenu {
@@ -93,7 +94,10 @@
     right: 0;
     z-index: 1;
     background-color: rgb(240, 248, 255, 0.9);
-    box-shadow: 0 4px 8px 0 rgba(95, 95, 95, 0.1), 0 6px 20px 0 rgba(95, 95, 95, 0.1);
+    backdrop-filter: blur(15px);
+    border: 2px solid snow;
+    box-shadow: 0 4px 8px 0 rgba(95, 95, 95, 0.1),
+      0 6px 20px 0 rgba(95, 95, 95, 0.1);
     border-radius: 10px;
   }
 
@@ -103,7 +107,7 @@
   }
 
   .menuIcon {
-    display: block; /* Show the hamburger icon on mobile */
+    display: block;
   }
 
   .nav.showMenu {
