@@ -53,7 +53,6 @@ const routes = createBrowserRouter([
       {
         path: "/details/:id",
         element: <Details />,
-        loader: ({params}) => fetch(`http://localhost:5173/jobs/${params.id}`)
       },
       {
         path: "/signin",
