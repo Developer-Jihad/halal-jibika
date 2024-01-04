@@ -19,7 +19,7 @@ export default function LeatestJobComponent() {
     <>
       <div className={style.leatestJob}>
         <div className="container">
-          <h1 className={style.title}>LEATEST JOBS _______________</h1>
+          <h1 className={style.title}>LEATEST JOBS __________</h1>
           <div className={style.jobs}>
             {leatesJobs.map((job) => (
               <JobComponent
