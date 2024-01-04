@@ -9,8 +9,6 @@ export default function Applied() {
 
   const [appliedJobIds, addToApplied] = useLocalStorage("appliedJobIds");
 
-  console.log(appliedJobIds);
-
   const isApplied = !!Object.values(appliedJobIds).length;
 
   const handleDelete = (id) => {

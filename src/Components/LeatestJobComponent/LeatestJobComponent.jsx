@@ -8,7 +8,6 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";
 export default function LeatestJobComponent() {
   const [jobs, setJobs] = useState(useRouteLoaderData("root").data);
   const leatesJobs = jobs.slice(0, 5);
-  console.log(leatesJobs);
   const [favJobsIds, addToFavorite] = useLocalStorage("favJobIds");
   const [appliedJobIds, addToApplied] = useLocalStorage("appliedJobIds");
 
