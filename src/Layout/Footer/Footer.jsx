@@ -1,7 +1,7 @@
 // Footer.js
 
 import React from "react";
-import styles from "./Footer.module.css";
+import styles from "./footer.module.css";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
@@ -10,13 +10,12 @@ const Footer = () => {
   return (
     <div className={styles.footerBg}>
       <footer className={styles.footer}>
-        <div className={styles.column} style={{border: 'none'}}>
+        <div className={styles.column} style={{ border: "none" }}>
           <div className={styles.logo}>
             <img src={Logo} alt="" />
           </div>
           <p>
-            “Keep hardworking, take patients and make yourself ready for
-            jobs”.
+            “Keep hardworking, take patients and make yourself ready for jobs”.
           </p>
         </div>
         <div className={styles.column}>
