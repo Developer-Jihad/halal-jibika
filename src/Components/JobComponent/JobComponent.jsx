@@ -24,7 +24,11 @@ export default function JobComponent({ job, handleDelete }) {
     <div className={style.jobCard}>
       <div className="flex">
         <div>
-          <img className={style.brandLogo} src={logo} alt="" />
+          {logo ? (
+            <img className={style.brandLogo} src={logo} alt={companyName} />
+          ) : (
+            <h1>{companyName}</h1>
+          )}
         </div>
         <div className="icon">
           <MdFavoriteBorder />

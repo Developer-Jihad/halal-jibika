@@ -1,6 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import { FaFacebook, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import styles from "../auth.module.css";
 import img from "../../../assets/images/login.gif";
 import { Link } from "react-router-dom";

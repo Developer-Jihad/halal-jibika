@@ -60,11 +60,11 @@ export default function Header() {
           <div className={`${style.routes} ${style.desktopMenu}`}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/jobs">Jobs</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/contact">Contacts</NavLink>
-            <NavLink to="/favorite">Favorite</NavLink>
+            <NavLink to="/favorite">Favorites</NavLink>
             <NavLink to="/applied">Applied</NavLink>
             <NavLink to="/addjobs">Add Jobs</NavLink>
+            <NavLink to="/contact">Contacts</NavLink>
+            <NavLink to="/about">About</NavLink>
           </div>
           <div className={`${style.routes} ${style.desktopMenu}`}>
             {user ? (
@@ -100,12 +100,6 @@ export default function Header() {
               <NavLink to="/jobs" onClick={closeMenu}>
                 Jobs
               </NavLink>
-              <NavLink to="/about" onClick={closeMenu}>
-                About
-              </NavLink>
-              <NavLink to="/contact" onClick={closeMenu}>
-                Contacts
-              </NavLink>
               <NavLink to="/contact" onClick={closeMenu}>
                 Favorite
               </NavLink>
@@ -114,6 +108,12 @@ export default function Header() {
               </NavLink>
               <NavLink to="/addjobs" onClick={closeMenu}>
                 Add Jobs
+              </NavLink>
+              <NavLink to="/contact" onClick={closeMenu}>
+                Contacts
+              </NavLink>
+              <NavLink to="/about" onClick={closeMenu}>
+                About
               </NavLink>
               <div className={style.profile}>
                 {user ? (

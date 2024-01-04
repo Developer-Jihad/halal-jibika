@@ -10,7 +10,7 @@
 .container {
   max-width: 1200px;
   margin: auto;
-  padding-inline: 20px;
+  /* padding-inline: 20px; */
 }
 :root {
   --deepGreen: #2bb573;
