@@ -1,5 +1,5 @@
 import React from "react";
-import { MdFavoriteBorder } from "react-icons/md";
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { BiDetail } from "react-icons/bi";
 import style from "./job.module.css";
 import { BiSolidEdit } from "react-icons/bi";
@@ -7,7 +7,14 @@ import { RiDeleteBin4Fill } from "react-icons/ri";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default function JobComponent({ job, handleDelete }) {
+export default function JobComponent({
+  job,
+  handleDelete,
+  addToFavorite,
+  addToApplied,
+  isFav,
+  isApplied,
+}) {
   const { title, position, logo, id, description, companyName } = job;
 
   const handleDeleteRequest = async () => {
@@ -30,8 +37,8 @@ export default function JobComponent({ job, handleDelete }) {
             <h1>{companyName}</h1>
           )}
         </div>
-        <div className="icon">
-          <MdFavoriteBorder />
+        <div onClick={() => addToFavorite(id)} className="icon">
+          {!isFav ? <MdFavoriteBorder /> : <MdFavorite color="green" />}
         </div>
       </div>
       <br />
@@ -39,7 +46,15 @@ export default function JobComponent({ job, handleDelete }) {
       <b>{title}</b>
       <p>{description}</p>
       <div className="flex">
-        <button className="secondary-btn">Apply Now</button>
+        <div onClick={() => addToApplied(id)}>
+          {isApplied ? (
+            <button style={{ color: "salmon" }} className="secondary-btn">
+              Applied
+            </button>
+          ) : (
+            <button className="secondary-btn">Apply Now</button>
+          )}
+        </div>
         <Link to={`/details/${id}`}>
           <div className="icon">
             <BiDetail />

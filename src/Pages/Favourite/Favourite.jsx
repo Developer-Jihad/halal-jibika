@@ -1,7 +1,52 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { useRouteLoaderData } from "react-router-dom";
+import JobComponent from "../../Components/JobComponent/JobComponent";
+import style from "../Jobs/jobs.module.css";
 
 export default function Favourite() {
+  const [jobs, setJobs] = useState(useRouteLoaderData("root").data);
+  const [favJobsIds, setFavJobsIds] = useState(
+    JSON.parse(localStorage.getItem("favJobIds")) || {}
+  );
+  useEffect(() => {
+    localStorage.setItem("favJobIds", JSON.stringify(favJobsIds));
+  }, [favJobsIds]);
+
+  const isFavEmpty = !!Object.values(favJobsIds).length;
+
+  const addToFavorite = (id) => {
+    setFavJobsIds((prevFavJobsIds) => {
+      const updatedFavJobsIds = { ...prevFavJobsIds };
+      if (updatedFavJobsIds[id] !== undefined) delete updatedFavJobsIds[id];
+      else updatedFavJobsIds[id] = true;
+      return updatedFavJobsIds;
+    });
+  };
+  const handleDelete = (id) => {
+    setJobs((prevJobs) => prevJobs.filter((job) => job.id !== id));
+  };
   return (
-    <div>Favourite</div>
-  )
+    <div className="container">
+      <h1 className="title">
+        {isFavEmpty
+          ? "Your favourite JOBS"
+          : "You Don't have any Favourite Job"}
+      </h1>
+      <div className={style.jobs}>
+        {isFavEmpty &&
+          jobs.map((job) => {
+            if (!favJobsIds[job.id]) return null;
+            return (
+              <JobComponent
+                isFav={true}
+                handleDelete={handleDelete}
+                addToFavorite={addToFavorite}
+                key={job.id}
+                job={job}
+              />
+            );
+          })}
+      </div>
+    </div>
+  );
 }

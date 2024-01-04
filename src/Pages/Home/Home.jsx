@@ -5,8 +5,8 @@ import LeatestJobComponent from "../../Components/LeatestJobComponent/LeatestJob
 export default function Home() {
   return (
     <>
-      <HeroComponent/>
-      <LeatestJobComponent/>
+      <HeroComponent />
+      <LeatestJobComponent />
     </>
   );
 }

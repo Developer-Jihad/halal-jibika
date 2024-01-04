@@ -13,7 +13,8 @@ const AddJobForm = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+
     setFormData({
       ...formData,
       [name]: value,
@@ -23,6 +24,7 @@ const AddJobForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      formData.id = +formData.id;
       const response = await axios.post("http://localhost:9000/jobs", formData);
       console.log("POST Response:", response.data);
     } catch (error) {
