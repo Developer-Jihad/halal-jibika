@@ -38,7 +38,7 @@ export default function JobComponent({
           )}
         </div>
         <div onClick={() => addToFavorite(id)} className="icon">
-          {!isFav ? <MdFavoriteBorder /> : <MdFavorite color="green" />}
+          {!isFav ? <MdFavoriteBorder /> : <MdFavorite />}
         </div>
       </div>
       <br />

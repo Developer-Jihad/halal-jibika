@@ -12,6 +12,7 @@ import axios from "axios";
 import Applied from "../Pages/Applied/Applied";
 import AddJobs from "../Pages/AddJobs/AddJobs";
 import Details from "../Pages/Jobs/Details";
+import PrivateRoutes from "./PrivateRoutes";
 
 const routes = createBrowserRouter([
   {
@@ -40,15 +41,27 @@ const routes = createBrowserRouter([
       },
       {
         path: "/favorite",
-        element: <Favourite />,
+        element: (
+          <PrivateRoutes>
+            <Favourite />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/applied",
-        element: <Applied />,
+        element: (
+          <PrivateRoutes>
+            <Applied />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/addjobs",
-        element: <AddJobs />,
+        element: (
+          <PrivateRoutes>
+            <AddJobs />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/details/:id",

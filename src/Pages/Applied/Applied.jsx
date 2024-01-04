@@ -2,27 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useRouteLoaderData } from "react-router-dom";
 import JobComponent from "../../Components/JobComponent/JobComponent";
 import style from "../Jobs/jobs.module.css";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export default function Applied() {
   const [jobs, setJobs] = useState(useRouteLoaderData("root").data);
-  const [appliedJobIds, setAppliedJobIds] = useState(
-    JSON.parse(localStorage.getItem("appliedJobIds")) || {}
-  );
-  useEffect(() => {
-    localStorage.setItem("appliedJobIds", JSON.stringify(appliedJobIds));
-  }, [appliedJobIds]);
+
+  const [appliedJobIds, addToApplied] = useLocalStorage("appliedJobIds");
+
+  console.log(appliedJobIds);
 
   const isApplied = !!Object.values(appliedJobIds).length;
-
-  const addToApplied = (id) => {
-    setAppliedJobIds((prevAppliedJobsId) => {
-      const updatedAppliedJobsId = { ...prevAppliedJobsId };
-      if (updatedAppliedJobsId[id] !== undefined)
-        delete updatedAppliedJobsId[id];
-      else updatedAppliedJobsId[id] = true;
-      return updatedAppliedJobsId;
-    });
-  };
 
   const handleDelete = (id) => {
     setJobs((prevJobs) => prevJobs.filter((job) => job.id !== id));
