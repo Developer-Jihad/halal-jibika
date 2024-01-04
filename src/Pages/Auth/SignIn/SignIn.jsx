@@ -28,7 +28,7 @@ const SignIn = () => {
     e.target.password.value = "";
   };
   const notify = () => {
-    toast("Default Notification !");
+    toast("Default Notification !", { autoClose: 1000 });
   };
   if (user) {
     notify();

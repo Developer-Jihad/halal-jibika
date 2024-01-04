@@ -16,7 +16,9 @@ export default function Header() {
   const handleSignOut = async () => {
     const success = await signOut();
     if (success) {
-      toast.success("You Are Signing Out");
+      toast.success("You Are Signing Out", {
+        autoClose: 1000,
+      });
     }
   };
 

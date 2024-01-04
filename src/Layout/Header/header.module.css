@@ -6,7 +6,7 @@
   top: 0;
   width: 100%;
   background-color: rgb(240, 248, 255, 0.7);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
   border-bottom: 2px solid snow;
   box-shadow: 0 4px 8px 0 rgba(95, 95, 95, 0.1),
     0 6px 20px 0 rgba(95, 95, 95, 0.1);

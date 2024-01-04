@@ -43,6 +43,7 @@ const SignUp = () => {
   const notify = () => {
     toast.success("Success Notification !", {
       position: toast.POSITION.TOP_CENTER,
+      autoClose: 1000
     });
   };
   if (loading) {
